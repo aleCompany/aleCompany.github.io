@@ -2,6 +2,8 @@
 permalink: /about/
 title: "About"
 excerpt: "About Me"
+author_profile: true
+sidebar_main: true
 
 
 #last_modified_at: 2020-09-22T06:22:00+09:00
