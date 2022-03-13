@@ -22,7 +22,7 @@ $$
 
 즉, 확률의 곱셈 정리는
 $$
-P(A \cap B) = P(A)P(B|A) = P(B)P(A|B)
+P(A \cap B) = P(A)P(B|A) = P(B)P(A|B)  단, P(A)>0,P(B)>0
 $$
 
 로 표현이 된다.
