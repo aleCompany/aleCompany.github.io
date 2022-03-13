@@ -1,37 +1,65 @@
 # main links
 main:
-# - title: "Quick-Start Guide"
-#    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "Category"
+    url: /categories/
+  - title: "Tag"
+    url: /tags/    
   - title: "About"
     url: /about/
 # - title: "Sample Posts"
 #   url: /year-archive/
 # - title: "Sample Collections"
 #   url: /collection-archive/
-  - title: "Home"
-    url: /sitemap/
+#  - title: "Home"
+#    url: /sitemap/
+  - title: "Search"
+    url: /search/    
+
 docs:
-  - title: Database
+  - title: "기초통계"
     children:
-      - title: "Oracle"
-        url: oracle/
-        category: "oracle"
-      - title: "MS-SQL"
-        url: mssql/
-        category: "mssql"
-      - title: "MariaDB"
-        url: mariadb/
-        category: "mariadb"
-  - title: Server
+      - title: "확률통계"
+        url: /statistics/
+        category: "statistics"
+  - title: "다변량분석"        
+    children:  
+      - title: "Anova"
+        url: /statAnova/
+        category: "statAnova"
+  - title: "AI/Big Data"
     children:
-      - title: "Ubuntu"
-        url: ubuntu/
-        category: "ubuntu"
-      - title: "Windows Server"
-        url: windows-server/
-        category: "windows-server"
-  - title: Etc
+      - title: "AI 빅데이터 개요"
+        url: aiBigData/
+        category: "aiBigData"
+      - title: "AI 빅데이터 프로그래밍"
+        url: /aiBigDataPrg/
+        category: "aiBigDataPrg"
+      - title: "데이터 마이닝"
+        url: /DataMining/
+        category: "DataMining"
+      - title: "텍스트 마이닝"
+        url: /txtMining/
+        category: "txtMining"
+      - title: "인공지능과 딥러닝"
+        url: /deepLearn/
+        category: "deepLearn"
+      - title: "빅데이터 클라우드 컴퓨팅"
+        url: /cloudCom/
+        category: "cloudCom"        
+  - title: "분석환경설정"
     children:
-      - title: "Jekyll"
-        url: jekyll/
-        category: "jekyll"
+      - title: "통계R 설치"
+        url: /setupR/
+        category: "setupR"
+      - title: "파이썬 설치"
+        url: /setupPy/
+        category: "setupPy"
+      - title: "코딩"
+        url: /codeing/
+        category: "codeing"
+  - title: "요리"
+    children:
+      - title: "파운드케익"
+        url: /poundCake/
+        category: "poundCake"        
+
