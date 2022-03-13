@@ -39,9 +39,9 @@ $$
 
 예를 들어 주사위 1개를 굴려 2의 배수가 나올 확률 P(A), 3의 배수가 나올 확률을 P(B)라고 할때,
 
-
-![image](../../images/2022-03-13-prob-product/image-20220313215541720.png){:center}
-
+<p align='center'>
+<img src="../../images/2022-03-13-prob-product/image-20220313215541720.png" alt="image-20220313215541720" style="zoom:80%;" />
+</p>
 
 위의 벤다이어 그램으로 나타날 수 있고
 $$
