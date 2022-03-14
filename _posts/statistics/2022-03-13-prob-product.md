@@ -9,19 +9,10 @@ author_profile: false
 ###  **곱셈정리 개요**
 
 확률의 곱셈정리라고 하면, 확률의 곱사건  $P(A \cap B)$ 를 구한는 것이다. 즉 **사건A**와 동시에**사건B** 가 발생할 수 있는 경우를 말한다.
-이를 다른 형태로 표현하면
-
-
-사건 A먼저 일어난 경우 $P(A \cap B)=P(A)P(B|A)$로 표현할 수 있고<br>
-사건 B먼저 일어난 경우 $P(A \cap B) = P(B)P(A|B)$로 표현할 수 있다.
-
+이를 다른 형태로 표현하면<br><br>사건 A먼저 일어난 경우 $P(A \cap B)=P(A)P(B|A)$로 표현할 수 있고<br>사건 B먼저 일어난 경우 $P(A \cap B) = P(B)P(A|B)$로 표현할 수 있다.
 
 즉, 확률의 곱셈 정리는
-$$
-P(A \cap B) = P(A)P(B|A) = P(B)P(A|B) \quad P(A)>0,P(B)>0
-$$
-
-로 표현이 된다.
+$P(A \cap B) = P(A)P(B|A) = P(B)P(A|B) \quad P(A)>0,P(B)>0$ 로 표현이 된다.
 
 ### **독립사건과 종속사건의 개념**
 
@@ -49,16 +40,8 @@ $P(A) = \frac3  6 이고, P(B) = \frac2  6 = \frac1  3, P(A \cap B) = \frac1 6$
 오히려 배반사건의 경우 P(A)가 일어나면, P(B)가 일어날수 없기때문에 강한 영향을 미친다고 할 수있다.
 
 결국 독립인경우 사건A가 일어나던, 일어나지 않던 사건 B가 일어날 확률이 동일 하다는 것은
-$
-P( B|A ) = \frac {P(A \cap B)}{P(A)} , P(B|A^c) = \frac {P(A^c \cap B)}{P(A^c)} = \frac {P(B)-P(A \cap B)}{1- P(A)}$ 두식이   같으려면 , $P(A) \times P(B) = P(A \cap B)$ 이다
-
-
-정리하자면, 
-독립사건일때, $P(A \cap B)= P(A) \times P(B)$ 단, $P(A)>0,P(B)>0$
-
-종속사건일때, $P(A \cap B) = P(A)P(B|A) = P(B)P(A|B)$
-
-이러한 차이가 있는 것이다.
+$P( B|A ) = \frac {P(A \cap B)}{P(A)} , P(B|A^c) = \frac {P(A^c \cap B)}{P(A^c)} = \frac {P(B)-P(A \cap B)}{1- P(A)}$ 두식이   같으려면 , $P(A) \times P(B) = P(A \cap B)$ 이다<br><br>
+정리하자면, <br>독립사건일때, $P(A \cap B)= P(A) \times P(B)$ 단, $P(A)>0,P(B)>0$ <br> 종속사건일때, $P(A \cap B) = P(A)P(B|A) = P(B)P(A|B)$
 
 ### **시행의 독립과 사건의 독립**
 
