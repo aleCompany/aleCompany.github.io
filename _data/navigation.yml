@@ -31,6 +31,9 @@ docs:
       - title: "연관성분석"
         url: /association/
         category: "association"
+      - title: "의사결정나무"
+        url: /decisiontree/
+        category: "decisiontree"
   - title: "AI/Big Data"
     children:
       - title: "AI 빅데이터 프로그래밍"
