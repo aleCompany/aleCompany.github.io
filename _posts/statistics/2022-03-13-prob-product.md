@@ -86,7 +86,5 @@ $P(A \cap B) = \frac{1} {6} , P(A) = \frac{3} {6} , P(B) = \frac{1} {6}  , P(A) 
 
 사건 A와 사건 B는 독립사건이 아니다. 하지만 두 시행에 독립시행이며, 이에 대한 확률은 
 
-$$
- P(A \times B) = P(A) \times P(B) = \frac{1} {12} 로 구할 수 있다.
-$$
+$P(A \times B) = P(A) \times P(B) = \frac{1} {12}$로 구할 수 있다.
 
