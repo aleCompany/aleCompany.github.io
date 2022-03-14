@@ -8,7 +8,7 @@ author_profile: false
 ---
 
 연관성분석은 장바구니분석(Market Basket Analysis) 또는 서열분석(Sequence Analysis) 이라고도 한다 <br>기업의 데이터에서 상품구매, 서비스 등 일련의 거래 또는 사건들 간의 규칙을 발견 할 목적으로 사용된다.
-<br>주요 응용은 Market basket analysis, cross-marketing, catalog design, loss-leader analysis, clustering, classification 등
+<br>주요 응용은 Market basket analysis, cross-marketing, catalog design, loss-leader analysis, clustering, classification 등<br>연관성 규칙이란 "어떤사건이 일어나면 다른 사건이 일어난다"와 같은 연관성을 말한다<br>연관성 규칙은 X->Y의 형식을 갖는 패턴으로 X항목 집합이 발생할때는 Y항목의 집합도 함께 발생하는 경향이 있다는 뜻이다.
 
 
 ###  **연관규칙 형태**
@@ -82,7 +82,7 @@ author_profile: false
 
 ###  **데이터의 형태**
 
-   |idi(identifier-item file)|itl(item list file|
+   |idi(identifier-item file)|itl(item list file)|
    |-|-|
    |001, apples|apples, orange, banna|   
    |001, oranges|carrot|   
