@@ -5,25 +5,20 @@ categories: statistics
 tag: [통계, 확률, 독립사건]
 toc: true
 author_profile: false
-
 ---
 ###  **곱셈정리 개요**
 
-확률의 곱셈정리라고 하면, 확률의 곱사건  P(A∩B) 를 구한는 것이다. 즉 **사건A**와 동시에**사건B** 가 발생할 수 있는 경우를 말한다.
+확률의 곱셈정리라고 하면, 확률의 곱사건  $P(A \cap B)$ 를 구한는 것이다. 즉 **사건A**와 동시에**사건B** 가 발생할 수 있는 경우를 말한다.
 이를 다른 형태로 표현하면
 
 
-$$
-사건 A먼저 일어난 경우 P(A \cap B) =  P(A) P(B|A) 로 표현할 수 있고
-$$
+사건 A먼저 일어난 경우 $P(A \cap B)=P(A)P(B|A)$로 표현할 수 있고<br>
+사건 B먼저 일어난 경우 $P(A \cap B) = P(B)P(A|B)$로 표현할 수 있다.
 
-$$
-사건 B먼저 일어난 경우 P(A \cap B) = P(B)P(A|B)  로 표현할 수 있다.
-$$
 
 즉, 확률의 곱셈 정리는
 $$
-P(A \cap B) = P(A)P(B|A) = P(B)P(A|B)  단, P(A)>0,P(B)>0
+P(A \cap B) = P(A)P(B|A) = P(B)P(A|B) \quad P(A)>0,P(B)>0
 $$
 
 로 표현이 된다.
@@ -44,26 +39,24 @@ $$
 </p>
 
 위의 벤다이어 그램으로 나타날 수 있고
-$$
-P(A) = \frac3  6 이고, P(B) = \frac2  6 = \frac1  3, P(A \cap B) = \frac1  6 이기 때문에, P(A) \times P(B) = P(A \cap B)
-$$
+
+$P(A) = \frac3  6 이고, P(B) = \frac2  6 = \frac1  3, P(A \cap B) = \frac1 6$
+6 이기 때문에, $P(A) \times P(B) = P(A \cap B)$
+
 가 성립된다. 
 이것은 2의 배수가 나왔다고 해서 3의 배수가 나올 확률에 어떠한 영향도 미치지 않는 사건이라 볼 수 있고 즉 **독립사건** 이라고 할 수있다
 
 오히려 배반사건의 경우 P(A)가 일어나면, P(B)가 일어날수 없기때문에 강한 영향을 미친다고 할 수있다.
 
 결국 독립인경우 사건A가 일어나던, 일어나지 않던 사건 B가 일어날 확률이 동일 하다는 것은
-$$
-P( B|A ) = \frac {P(A \cap B)}{P(A)} , P(B|A^c) = \frac {P(A^c \cap B)}{P(A^c)} = \frac {P(B)-P(A \cap B)}{1- P(A)} 두식이 \quad  같으려면 , P(A) \times P(B) = P(A \cap B) 이다
-$$
+$
+P( B|A ) = \frac {P(A \cap B)}{P(A)} , P(B|A^c) = \frac {P(A^c \cap B)}{P(A^c)} = \frac {P(B)-P(A \cap B)}{1- P(A)}$ 두식이   같으려면 , $P(A) \times P(B) = P(A \cap B)$ 이다
 
-정리하자면, <br><br>
-$$
-독립사건일때, \ P(A \cap B) = P(A) \times P(B) \ 단, P(A)>0,P(B)>0
-$$
-$$
-종속사건일때, \ P(A \cap B) = P(A)P(B|A) = P(B)P(A|B)
-$$
+
+정리하자면, 
+독립사건일때, $P(A \cap B)= P(A) \times P(B)$ 단, $P(A)>0,P(B)>0$
+
+종속사건일때, $P(A \cap B) = P(A)P(B|A) = P(B)P(A|B)$
 
 이러한 차이가 있는 것이다.
 
@@ -89,9 +82,7 @@ $$
 
 주사위를 던졌을때 홀수가 나온는 사건을 A, 5의 배수가 나오는 사건을 B 라고 했을때
 
-$$
-P(A \cap B) = \frac{1} {6} , P(A) = \frac{3} {6} , P(B) = \frac{1} {6}  , P(A) \times P(B) = \frac{1} {12},  즉 P(A \cap B) \not = { P(A) \times P(B) }
-$$
+$P(A \cap B) = \frac{1} {6} , P(A) = \frac{3} {6} , P(B) = \frac{1} {6}  , P(A) \times P(B) = \frac{1} {12}$, 즉 $P(A \cap B) \not = { P(A) \times P(B) }$
 
 사건 A와 사건 B는 독립사건이 아니다. 하지만 두 시행에 독립시행이며, 이에 대한 확률은 
 
