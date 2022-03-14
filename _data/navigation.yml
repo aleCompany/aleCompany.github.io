@@ -26,11 +26,13 @@ docs:
       - title: "Anova"
         url: /statAnova/
         category: "statAnova"
+  - title: "AI 빅데이터 개요"      
+    children:
+      - title: "연관성분석"
+        url: /association/
+        category: "association"
   - title: "AI/Big Data"
     children:
-      - title: "AI 빅데이터 개요"
-        url: aiBigData/
-        category: "aiBigData"
       - title: "AI 빅데이터 프로그래밍"
         url: /aiBigDataPrg/
         category: "aiBigDataPrg"
