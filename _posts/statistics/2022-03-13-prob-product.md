@@ -31,7 +31,7 @@ $P(A \cap B) = P(A)P(B|A) = P(B)P(A|B) \quad P(A)>0,P(B)>0$ 로 표현이 된다
 
 위의 벤다이어 그램으로 나타날 수 있고
 
-$P(A) = \frac3  6 이고, P(B) = \frac2  6 = \frac1  3, P(A \cap B) = \frac1 6$
+$P(A) = \frac3  6$ 이고, $P(B) = \frac2  6 = \frac1  3, P(A \cap B) = \frac1 6$
 6 이기 때문에, $P(A) \times P(B) = P(A \cap B)$
 
 가 성립된다. 
