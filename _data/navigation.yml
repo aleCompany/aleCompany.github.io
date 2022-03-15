@@ -21,6 +21,9 @@ docs:
       - title: "확률통계"
         url: /statistics/
         category: "statistics"
+      - title: "통계분석기초"
+        url: /analysisBasic/
+        category: "analysisBasic"
   - title: "다변량분석"        
     children:  
       - title: "Anova"
@@ -51,11 +54,17 @@ docs:
       - title: "빅데이터 클라우드 컴퓨팅"
         url: /cloudCom/
         category: "cloudCom"        
-  - title: "분석환경설정"
+  - title: "기초 및 환경설정"
     children:
+      - title: "통계R 기초"
+        url: /basicR/
+        category: "basicR"    
       - title: "통계R 설치"
         url: /setupR/
         category: "setupR"
+      - title: "파이썬 기초"
+        url: /basicPy/
+        category: "basicPy"
       - title: "파이썬 설치"
         url: /setupPy/
         category: "setupPy"
