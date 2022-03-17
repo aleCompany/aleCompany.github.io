@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "연관성분석 예제1"
+title:  "연관성분석 예제(1)"
 categories: association
 tag: [ai, big Data, 통계분석]
 toc: true
