@@ -68,9 +68,6 @@ docs:
       - title: "파이썬 설치"
         url: /setupPy/
         category: "setupPy"
-      - title: "코딩"
-        url: /codeing/
-        category: "codeing"
   - title: "요리"
     children:
       - title: "파운드케익"
