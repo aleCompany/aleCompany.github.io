@@ -36,7 +36,7 @@ author_profile: false
     * 비율의 평균에 주로 사용, 연평균  증가율 등
     * $G = \sqrt[n]{x_1 \times x_2 \times \cdots \times x_n }$
   
-  * 조하평균(mean)
+  * 조화평균(harmonic mean)
     * 속도 등과 같이 여러단위가 결합된 경우 적용
     * $\widetilde{x}_H = \frac{n} { \frac{1}{x_1} + \frac{1}{x_2} + \cdots + \frac{1}{x_n} }$
     * ex) 갈때 200Km/h, 올때 100Km/h 온경우  평균시속 133.33Km/h = 2/ (1/200+1/100)
