@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "통계자료의 표현"
+title:  "통계자료의 종류"
 categories: analysisBasic
 tag: [통계, 확률, 통계자료]
 toc: true
