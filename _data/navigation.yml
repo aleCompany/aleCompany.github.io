@@ -34,6 +34,9 @@ docs:
       - title: "연관성분석"
         url: /association/
         category: "association"
+      - title: "군집분석"
+        url: /Clustering/
+        category: "decisiontree"        
       - title: "의사결정나무"
         url: /decisiontree/
         category: "decisiontree"
