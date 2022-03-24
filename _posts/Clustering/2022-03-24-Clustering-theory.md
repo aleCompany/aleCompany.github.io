@@ -105,3 +105,26 @@ k-means 알고리즘은 4단계로 수행된다.
 * Step 5 : 데이터를 군집에 재할당(배정)
 
   ![](../../images/2022-03-24-Clustering-theory/Cluster_3.png)<!-- -->
+
+ 
+
+### 군집수 결정방법
+* 계층적 군집분석의 덴드로그램 시각화를 이용한 군집의 개수 결정 (Hierarchical Clustering: Dendrogram)
+* 팔꿈치 방법을 이용한 군집의 개수 결정 (The Elbow Method)
+* 실루엣 방법을 이용한 군집의 개수 결정 (The Silhouette Method)
+
+  ![](../../images/2022-03-24-Clustering-theory/Cluster_4.png)<!-- -->
+
+
+
+### 군집분석의 타당성 지표
+* 실루엣(Silhouette)
+  * 군집 내의 응집도와 군집 간 분리도를 이용한 지표
+  * -1 ~ 1 사이의 값, (1에 가까울수록->완벽한 군집화, -1에 가까울수록 -> 전혀 군집화가 안됨)
+  * 실루엣 스코어 수식
+
+$$ s(i) =  \frac{ b(i)-a(i) } { max[ a(i),b(i) ] } \quad -1 <= s(i) <= 1$$
+
+* Dunn Index
+  * 군집간 거리의 최소값 ÷ 군집간 거리의 최대값
+  * Dunn Index값이 클수록 군집이 잘 형성된 것
