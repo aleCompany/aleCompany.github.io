@@ -40,6 +40,9 @@ docs:
       - title: "의사결정나무"
         url: /decisiontree/
         category: "decisiontree"
+      - title: "사례기반추론"
+        url: /casebased/
+        category: "casebased"
   - title: "AI/Big Data"
     children:
       - title: "AI 빅데이터 프로그래밍"
