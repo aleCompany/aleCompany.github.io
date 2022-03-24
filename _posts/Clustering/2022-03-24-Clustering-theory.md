@@ -110,6 +110,7 @@ k-means 알고리즘은 4단계로 수행된다.
  
 
 ### 군집수 결정방법
+* Cluster Dendrogram 으로 개수 결정
 * 계층적 군집분석의 덴드로그램 시각화를 이용한 군집의 개수 결정 (Hierarchical Clustering: Dendrogram)
 * 팔꿈치 방법을 이용한 군집의 개수 결정 (The Elbow Method)
 * 실루엣 방법을 이용한 군집의 개수 결정 (The Silhouette Method)
