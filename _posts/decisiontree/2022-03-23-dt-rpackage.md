@@ -11,38 +11,38 @@ author_profile: false
 
 ### A. 데이터의 준비
 
-  ```r
+  ```{r}
      # Data의 구성은 종속변수가 있어야 한다.
-     result <- read.csv("mydata.csv", header=TRUE)
-     head(result)
+     > result <- read.csv("mydata.csv", header=TRUE)
+     > head(result)
   ```
 
 ### B. 데이터의 구분
   의사결정나무 모델의 성능 평가를 위해서 train과 test 데이터로 구분한다.
 
-  ``` r
+  ```{r}
      # 7:3 비율을 랜덤으로 나눈다.
      set.seed(1234) 
      # Traing Data 70%, Test Data 30%로 구부한다. 
      # replace = TRUE 중복을 허용하는지, 허용하지 않는지 일반적으로는 허용한다.TRUE 허용
-     resultsplit <- sample(2, nrow(result), replace=TRUE, prob=c(0.7, 0.3))
+    > resultsplit <- sample(2, nrow(result), replace=TRUE, prob=c(0.7, 0.3))
 
-     trainD <- result[resultsplit==1,] # train Data
-     testD <- result[resultsplit==2,] # test Data
+    > trainD <- result[resultsplit==1,] # train Data
+    > testD <- result[resultsplit==2,] # test Data
   ```
 
 ### C. 의사결정  나무의 형성
   **Training Data**를 가지고 예측모델  형성을 한다.
 
-  ``` r
+  ``` {r}
       # rpart 를 사용시 ctree, tree - ctree(response~. , data=trainD) , tree(response~. , data=trainD)
-      trainModel <- rpart(respoose(종속변수)~. , data=trainD) # response 종속변수
+    > trainModel <- rpart(respoose(종속변수)~. , data=trainD) # response 종속변수
   ```
 ### D. Fitting 값을 확인 (Coverage, 설명에 대한 분석)
   **Training Data** 를 가지고 검증 해본다.
-  ``` r
+  ``` {r}
       # Coverge 즉 설명에 대한 부분을 확인 해본다.
-      table(predict(trainModel, newdata=trainD, type="class"), trainD$response) 
+    > table(predict(trainModel, newdata=trainD, type="class"), trainD$response) 
   ```
   ```  
     ##       high  low  nr
@@ -57,8 +57,8 @@ author_profile: false
 
   **Test Data**를 가지고 검증해 본다
 
-  ``` r
-      table(predict(trainModel, newdata=testD , type="class"), testD$response)
+  ``` {r}
+    > table(predict(trainModel, newdata=testD , type="class"), testD$response)
   ```
   ```  
     ##       high  low  nr
@@ -70,10 +70,10 @@ author_profile: false
 
 ### E. 의사결정나무를 확인
 
-  ``` r
+  ``` {r}
       # rpart 함수를 사용 했을때는 rpart.plot 으로 그리고
       # ctree 함수를 사용 했을때는 plot(trainModel) or plot(trainModel, type='simple') 로 확인 가능하다.
-      rpart.plot(trainModel)
+    > rpart.plot(trainModel)
   ```
 
 ## 2. 의사결정 나무 생성 관련 R 패키지
