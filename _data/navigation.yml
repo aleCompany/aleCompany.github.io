@@ -36,7 +36,7 @@ docs:
         category: "association"
       - title: "군집분석"
         url: /Clustering/
-        category: "Clustering"        
+        category: "Clustering"
       - title: "의사결정나무"
         url: /decisiontree/
         category: "decisiontree"
