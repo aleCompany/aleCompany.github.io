@@ -83,5 +83,5 @@ author_profile: false
 |rpart()|CART(Classification And Regression Trees) 방법을 사용|rpart(formula, data)|install.packages("rpart")|
 |ctree()|Unbiased recursive partitioning based on permutation test 방법을  사용|ctree(formula, data)|install.packages("party")|
 
-3가지 방법의 차이는 가지치기를 하는데 통계 방법이 다르다는 것.
+2가지 방법의 차이는 가지치기를 하는데 통계 방법이 다르다는 것.
 * ctree()는 rpart() 함수의 2가지 문제점(통계적 유의성에 대한 판단없이 노드분할에 대한 과적합, 다양한 값으로 분할 가능한 변수가 다른 변수에 비해 선호 되는 문제)를 해결 해줌
