@@ -27,7 +27,7 @@ author_profile: false
 * 새로운 문제와 각 사례를 비교하고 가장 유사한 Case(사례)를 선택해야 한다.
 * 이러한 비교를 위해서는 유사도(Similarity) 가장 중요한 개념이 된다.* 
 * Step 1: 유사도의 측정
-  * $Distance = \left | Number1 - Number2  \right|$
+  * $Distance = \| Number1 - Number2  \|$
   * Ex) 10에서 4 또는 7 어떤것이 유사할까 ?
     * similarity between 7 and 10 = 7/10 = 0.7
     * similarity between 4 and 10 = 4/10 = 0.4 , 0.7 > 0.4 7이 더 유사하다고 할 수 있다
@@ -43,8 +43,11 @@ author_profile: false
 ### CBR Process
 
 1) 검색(Retirve) : 대상 문제가 주어지면, 사례 데이터베이스에서 그것 을 풀기에 적절한 사례들을 검색한다
+   
 2) 재사용(Reuse) : 이전의 사례로부터 대상 문제의 해결 방법을 연결 한다
+   
 3) 수정(Revise) : 이전의 해결 방법을 대상의 상황에 연결시킨 후, 그 새로운 해결 방법을 실세계에서 테스트하고, 필요하다면 수정 한다
+   
 4) 유지(Retain) : 해법이 성공적으로 대상문제에 적용된 후에, 그 러한 새로운 경험이 사례 데이터 베이스에 새로운 사례로서 저장 된다
 
 <center><img src="../../images/2022-03-24-casebased-theory/cbr_2.png" width="70%" height="70%"></center>
@@ -67,3 +70,4 @@ author_profile: false
 
 ### CBR 사례
 * SMART 고객지원 시스템, 사례기반(보험금지급사례와 보험통계 사례)으로 보험추천 시스템 등
+* Call Center, 제조업의 진단 등
