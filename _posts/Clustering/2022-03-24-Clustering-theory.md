@@ -41,15 +41,16 @@ author_profile: false
 
   2) 맨하튼 거리 , R코드 : distance(data, method="manhattan")
    
-       - 동일 차원에 있는 값 차이의 절대값을 차원별로 더한것
+     * 동일 차원에 있는 값 차이의 절대값을 차원별로 더한것
    
      $$ \sum_{i=1}^{n} \left| p_i - q_i\right|  $$
 
 
   3) 체비셰프 거리 , R코드 : distance(data, method="chebyshev")
    
-       - 동일 차원에 있는 값 차이의 절대값을 전체 차원에서 비교할 때 가장 큰값으로 정의
-     $$ MAX( \left| p_i - q_i\right| ) $$   
+     * 동일 차원에 있는 값 차이의 절대값을 전체 차원에서 비교할 때 가장 큰값으로 정의
+  
+     $$MAX( \left| p_i - q_i\right| )$$   
 
 
   4) 민코프스키 거리 , R코드 : distance(data, method="minkowski", p=m )
@@ -74,8 +75,8 @@ author_profile: false
   * 2 밀도기반(Density-based clustering) : DBSCAN algoritm
   * 장점 : 쉽다
   * 단점 : outlier 와 noisy data 처리가 어렵다.
-  * 
-
+  
+<br>
 * 계층적군집분석
   * 군집의 개수가 정해지지 않을때 사용하기 때문에 몇개 군집으로 나눠야 할 지에도 사용된다.
   * 계층적 군집의 목적은 일반적으로 먼저 수행하고, 데이터의 군집형성이 어떤지를 확인 하는 목적으로 수행하는 경우가 많다.
