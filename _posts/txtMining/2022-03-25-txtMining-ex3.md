@@ -71,8 +71,13 @@ author_profile: false
 * 단어간의 연관그래프
   
 ```{r}
+# ares 연관성분석 결과 class 에서 lhs, rhs를 1차원 리스트 형으로 변형
 > rules <- labels(ares, ruleSep=" ")
+
+# 단어를 분리 : strsplit(x, split, fixed = FALSE, perl = FALSE, useBytes = FALSE)
+# 1차원 리스트를 공백으로 구분하여 matrix 변경함 X축과 Y축으로
 > rules <- sapply(rules, strsplit, " ", USE.NAMES=F)
+
 > rulemat <- do.call("rbind", rules)
 > ruleg <- graph.edgelist(rulemat[-c(1:16),],directed=F)
 
