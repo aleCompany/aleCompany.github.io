@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "텍스트마이닝 이론"
-categories: Clustering
+categories: txtMining
 tag: [Ai bigData, 텍스트마이닝]
 toc: true
 author_profile: false
