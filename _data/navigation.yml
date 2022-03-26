@@ -43,6 +43,9 @@ docs:
       - title: "사례기반추론"
         url: /casebased/
         category: "casebased"
+      - title: "텍스트 마이닝"
+        url: /txtMining/
+        category: "txtMining"        
   - title: "AI/Big Data"
     children:
       - title: "AI 빅데이터 프로그래밍"
@@ -51,9 +54,6 @@ docs:
       - title: "데이터 마이닝"
         url: /DataMining/
         category: "DataMining"
-      - title: "텍스트 마이닝"
-        url: /txtMining/
-        category: "txtMining"
       - title: "인공지능과 딥러닝"
         url: /deepLearn/
         category: "deepLearn"
