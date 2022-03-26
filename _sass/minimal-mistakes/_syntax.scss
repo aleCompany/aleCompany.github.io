@@ -17,8 +17,12 @@ figure.highlight {
   pre.highlight {
     margin: 0;
     padding: 1em;
+    background: $base00;
+    color: $base05;
   }
 }
+
+pre { font-size: 90%; color: blueviolet; background-color:#eee;border-radius:4px; } /* 추가 */
 
 .highlight table {
   margin-bottom: 0;
