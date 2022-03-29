@@ -7,9 +7,7 @@ toc: true
 author_profile: false
 ---
 
-데이터 분석시 많이 발생하는 것이 단위의 불일치 이다. 이에 대한 해결로는 정규화(Normalization)과 표준화(Standardization)이 있다. 
-
-이 스케일링 방법은 단위가 다를 때 대상 데이터를 같은 기준으로 보도록 한다.
+데이터 분석시 많이 발생하는 것이 단위의 불일치 이다. 이에 대한 해결로는 정규화(Normalization)과 표준화(Standardization)이 있다.<br>이 스케일링 방법은 단위가 다를 때 대상 데이터를 같은 기준으로 보도록 한다.
 
 ###  자료의 정규화 (normalization)
 
@@ -38,7 +36,7 @@ $$ x_{new} = \frac{x_{i}-x_{min}}{x_{max} - x_{min}} $$
 * Z값은 관측값이 자료의 평균으로 부터 몇 배의 표준편차만큼 떨어져 있는지를 나타내는 상대적 위치를 의미
 * 분자와 분모의 단위가 상쇄되어 단위가 없다 ( (측정값-평균) / 표준편차).(unitless)
   
-  $$ Z_{i} = \frac{x_{i}- \bar{x}}{S} $$
+* $Z_{i} = \frac{x_{i}- \mu }{ \sigma }$ , 표본의 경우 $\frac{X_{i}- \bar{X}}{S}$
 
 * standardization 의 R 표현 
   
