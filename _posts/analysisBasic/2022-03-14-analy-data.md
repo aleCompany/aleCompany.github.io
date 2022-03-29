@@ -86,8 +86,8 @@ author_profile: false
   
 * 변동계수(coefficient of variation:CV)
   * 평균값을  감안한 상대적 산포도 척도
-  * 단위가 상쇄되어 없어짐 (unitless)
-  * 변동계수 = $CV=\frac{표준편차}{평균}$
+  * 단위가 상쇄되어 없어짐 (unitless, 표준편차 / 평균 )
+  * 변동계수 = $CV=\frac{ \sigma  }{\mu}$
 
 
 ###  비대칭도  (skewness)
