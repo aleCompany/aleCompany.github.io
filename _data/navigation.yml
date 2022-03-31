@@ -26,6 +26,9 @@ docs:
         category: "analysisBasic"
   - title: "다변량분석"        
     children:  
+      - title: "관계분석"
+        url: /statRelation/
+        category: "statRelation"
       - title: "Anova"
         url: /statAnova/
         category: "statAnova"
@@ -64,7 +67,7 @@ docs:
     children:
       - title: "통계R 기초"
         url: /basicR/
-        category: "basicR"    
+        category: "basicR"
       - title: "통계R 설치"
         url: /setupR/
         category: "setupR"
