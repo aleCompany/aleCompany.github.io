@@ -60,7 +60,7 @@ $$
 아래의 예시를 보면 좀 더 이해가 쉬울 것이다.
 
 <p align='center'>
-<img src="../../images/2022-03-13-prob-product/image-2.png" alt="image-20220313215541720" " />
+<img src="../../images/2022-03-13-prob-product/image-2.png" alt="image-20220313215541720"/>
 </p>
 
 주사위를 던졌을때 홀수가 나온는 사건을 A, 5의 배수가 나오는 사건을 B 라고 했을때
