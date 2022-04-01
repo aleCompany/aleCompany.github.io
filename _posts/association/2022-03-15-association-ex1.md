@@ -20,17 +20,17 @@ author_profile: false
 
 데이터 로드 R 코드 :
 
-``` r
-library(arulesViz)
-tmpath <- file( '연관분석_1.csv' , encoding = "EUC-KR")  #Save with Encoding... 세팅은 ECU-KR 로 되어 있어야 함
-result <- read.transactions( tmpath , format="basket" ,sep =",", header=F)
-close(tmpath)
+``` {r}
+> library(arulesViz)
+> tmpath <- file( '연관분석_1.csv' , encoding = "EUC-KR")  #Save with Encoding... 세팅은 ECU-KR 로 되어 있어야 함
+> result <- read.transactions( tmpath , format="basket" ,sep =",", header=F)
+> close(tmpath)
 ```
 
 분석실행 :
 
-``` r
-rules = apriori(result, parameter=list(supp=0.01, conf=0.5) )
+``` {r}
+> rules = apriori(result, parameter=list(supp=0.01, conf=0.5) )
 ```
 
     ## Apriori
@@ -55,8 +55,9 @@ rules = apriori(result, parameter=list(supp=0.01, conf=0.5) )
     ## writing ... [12 rule(s)] done [0.00s].
     ## creating S4 object  ... done [0.00s].
 
-``` r
-inspect(rules)  #규칙보기 , attributes(rules) - 전체 , inspect(head(sort(rules,by="lift"))) - lift(향상도) 상위 6개의 향상도 내림차순 정렬
+``` {r}
+#규칙보기 , attributes(rules) - 전체 , inspect(head(sort(rules,by="lift"))) - lift(향상도) 상위 6개의 향상도 내림차순 정렬
+> inspect(rules)  
 ```
 
     ##      lhs           rhs    support confidence coverage lift      count
@@ -82,16 +83,16 @@ confidence(0.6=support/coverage)은 감을 사고 배를 사는 확률이 0.6으
 
 support(지지도) vs 신뢰도(confidence)의 시각화:
 
-``` r
-plot(rules)  # 겹치지 않게 plot(rules,jitter=0)
+``` {r}
+> plot(rules)  # 겹치지 않게 plot(rules,jitter=0)
 ```
 
 ![](../../images/2022-03-15-association-ex1/unnamed-chunk-3-1.png)<!-- -->
 
 연관규칙 그래프 시각화:
 
-``` r
-plot(rules, method="grouped")
+``` {r}
+> plot(rules, method="grouped")
 ```
 
 ![](../../images/2022-03-15-association-ex1/unnamed-chunk-4-1.png)<!-- --> 
@@ -99,8 +100,8 @@ plot(rules, method="grouped")
 위 그림에서 LHS-\>RHS 로 가는 것 중에서 lift가 높은편이 배-\>사과
 상관관계가 크며, support가 큰 과일은 사과(가장 많이 팔림) 이다.
 
-``` r
-plot(rules, method="graph")
+``` {r}
+> plot(rules, method="graph")
 ```
 
 ![](../../images/2022-03-15-association-ex1/unnamed-chunk-5-1.png)<!-- -->
