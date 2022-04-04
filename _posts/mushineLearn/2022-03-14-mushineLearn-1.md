@@ -22,7 +22,7 @@ author_profile: false
          - 분류 문제는 **이진분류(O,X)** 또는  사과, 바나나, 포도 등의 **다중분류** 문제가 있다
          - 스팸 분류 등 ...
 
-    2. 회귀 (Classification)
+    2. 회귀 (Regression)
          - 데이터의 특징을 기준으로 연속된 값을 예측, 트렌드나 경향을 예측할 때 사용됨
          - 예를 들어 아파트 가격 예측 등
 
@@ -39,31 +39,46 @@ author_profile: false
     * 바둑을 학습하는 경우 에이전트(Agent)가 게임 환경(environment)에서 현재 상태(state)에서 높은 점수(reward)를 얻는 방법을 찾아가며 행동(action)하는 학습 방법으로 특정 학습 횟수를 초과하면 높은 점수(reward)를 획득할 수 있는 전략이 형성, **행동을 위한 행동목록은 사전정의** 필요
 
   
-### 대표적 알고리즘
-
-   |구분|종류|알고리즘|
-   |-|-|-|
-   |지도학습(Supervised Learning)|Classification|kNN|
-   |||Naive Bayes|
-   |||Support Vector|
-   |||Machine Decision|
-   ||Regression|Linear Regression|
-   |||Locally Weighted Linear|
-   |||Ridge|
-   |||Lasso|
-   |비지도학습(Unsupervised Learning)|| Clustering|
-   |||K Means|
-   |||Density Estimation|
-   |||Exception Maximization|
-   |||Pazen Window|
-   |||DBSCAN|
-   |강화학습(Reinforcement Learning)|| DQN|
-   ||| A3C|
-
-
 ### 기계학습의 3단계
 
 1. 데이터의 정리와 이해: 속성 추출(Feature Extraction), 전처리(Preprocessing)
 2. 데이터를 이용해 모델 학습 
 3. 학습한 모델의 평가 (Model Evaluation): 교차 검증(cross-validation), 파이프라인(pipeline) 등이 있음
 
+### 대표적 알고리즘
+
+<div style="display:inline-block;vertical-align: top;">
+<div style="display:inline-block;vertical-align: top;">
+<table>
+   <thead><tr><th>구분</th><th>종류</th><th>알고리즘</th></tr></thead>
+   <tbody>
+   <tr><td rowspan=8>지도학습<br>(Supervised)</td><td rowspan=4>Classification</td><td>kNN</td></tr>
+   <tr><td>Naive Bayes</td></tr>
+   <tr><td>Support Vector</td></tr>
+   <tr><td>Machine Decision</td></tr>
+   <tr><td rowspan=4>Regression</td><td>Linear Regression</td></tr>
+   <tr><td>Locally Weighted Linear</td></tr>
+   <tr><td>Ridge</td></tr>
+   <tr><td>Lasso</td></tr>
+   </tbody>   
+</table>
+</div>
+<div style="display:inline-block;vertical-align: top;">
+<table>
+   <thead><tr><th>구분</th><th>알고리즘</th></tr></thead>
+   <tr><td rowspan=6>비지도학습<br>(Unsupervised)</td><td>Clustering</td></tr>
+   <tr><td>K Means</td></tr>
+   <tr><td>Density Estimation</td></tr>
+   <tr><td>Exception Maximization</td></tr>
+   <tr><td>Pazen Window</td></tr>
+   <tr><td>DBSCAN</td></tr>
+</table>
+</div>
+<div style="display:inline-block;vertical-align: top;">
+<table>
+   <thead><tr><th>구분</th><th>알고리즘</th></tr></thead>
+   <tr><td rowspan=2>강화학습<br>(Reinforcement)</td><td> DQN</td></tr>
+   <tr><td>A3C</td></tr>
+</table>
+</div>
+</div>
