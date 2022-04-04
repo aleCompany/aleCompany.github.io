@@ -32,7 +32,7 @@ docs:
       - title: "Anova"
         url: /statAnova/
         category: "statAnova"
-  - title: "AI 빅데이터 개요"      
+  - title: "AI 빅데이터"      
     children:
       - title: "연관성분석"
         url: /association/
@@ -49,20 +49,14 @@ docs:
       - title: "텍스트 마이닝"
         url: /txtMining/
         category: "txtMining"        
-  - title: "AI/Big Data"
+  - title: "인공지능"
     children:
-      - title: "AI 빅데이터 프로그래밍"
-        url: /aiBigDataPrg/
-        category: "aiBigDataPrg"
-      - title: "데이터 마이닝"
-        url: /DataMining/
-        category: "DataMining"
-      - title: "인공지능과 딥러닝"
-        url: /deepLearn/
-        category: "deepLearn"
-      - title: "빅데이터 클라우드 컴퓨팅"
-        url: /cloudCom/
-        category: "cloudCom"        
+      - title: "기계학습"
+        url: /mushineLearn/
+        category: "mushineLearn"
+      - title: "데이터전처리"
+        url: /preData/
+        category: "preData"
   - title: "기초 및 환경설정"
     children:
       - title: "통계R 기초"

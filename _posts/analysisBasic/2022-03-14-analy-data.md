@@ -95,10 +95,13 @@ author_profile: false
 측정을  위해서 피어슨의 비대칭도 등이 있다.
 
 * 비대칭도(skewness)
-    * 평균과 중앙값의 상대적 크기에 따라 비대칭도가 결정된다.
+    * **평균과 중앙값의 상대적 크기에 따라 비대칭도**가 결정된다.
         * 좌우대칭(symmetric) 분포
         * 오른쪽 꼬리분포(skewed to the right 또는 positively  skewed) - mean>mdeian
+          * positive skewed 양수
         * 왼쪽 꼬리분포(skewed to the left 또는 negatively  skewed) - mean < median
+          * negative skewed 음수
+    * 비대칭도(왜도)의 값이 -2~2 정도이 치우침은 왜도가 크지 않다고 판단, 절대값 3미만이면 기준에 부합
 
 $$비대칭도 = E\left[
 \left (
@@ -124,9 +127,9 @@ $$비대칭도 = E\left[
 동시에 분포 양쪽 꼬리의 길고 두꺼운 정도를 측정함
 
 * 첨도계수(coefficient of kurtosis: CK)
-  * 높은 첨도(leptokurtic): 첨도계수가 0보다 큰 분포
+  * 높은 첨도(leptokurtic): **첨도계수가 0보다 큰** 분포
   * 보통 첨도(mesokurtic): 첨도계수가 0 인 분포 ( ex: 정규분포가 이에 해당 )
-  * 낮은 첨도(platykurtic): 첨도계수가 0 보다 작은 분포
+  * 낮은 첨도(platykurtic): **첨도계수가 0 보다 작은 분포**
 
 $$첨도 = E \left[
 \left (
