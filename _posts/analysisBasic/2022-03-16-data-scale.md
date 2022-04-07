@@ -46,3 +46,11 @@ $$ x_{new} = \frac{x_{i}-x_{min}}{x_{max} - x_{min}} $$
   # scale 함수 사용 ( 또는 (x-mean(x)) / sd(x) )
   > z = scale(x)
   ```
+
+    <pre>예제) 다음은 철수의 수학, 영어, 국어 성적과 반 전체의 평균 및 표준편차표이다. 
+    세과목 중 성적이 가장 좋은 과목은 어느 과목인가?
+    </pre>
+
+    <img src="../../images/2022-03-16-data-scale/pic-1.png" />
+
+    <img src="../../images/2022-03-16-data-scale/pic-2.png" />
