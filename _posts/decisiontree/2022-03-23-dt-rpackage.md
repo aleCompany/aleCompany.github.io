@@ -68,7 +68,7 @@ author_profile: false
   ```  
 위 예시 결과 에서 Accuracy Ratio = (38-2) / 38 = 0.947 가 된다.
 
-### E. 의사결정나무를 확인
+### F. 의사결정나무를 확인
 
   ``` {r}
       # rpart 함수를 사용 했을때는 rpart.plot 으로 그리고

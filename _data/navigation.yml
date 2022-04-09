@@ -57,6 +57,9 @@ docs:
       - title: "데이터전처리"
         url: /preData/
         category: "preData"
+      - title: "인공신경망"
+        url: /NeuralNetwork/
+        category: "NeuralNetwork"
   - title: "기초 및 환경설정"
     children:
       - title: "통계R 기초"
