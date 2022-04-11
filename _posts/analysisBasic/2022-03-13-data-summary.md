@@ -12,17 +12,14 @@ author_profile: false
 ###  자료의 종류 
 Data Type을 통계 기준으로 분류
 
-|자료|분류|
-|-|-|
-|범주자료<br>(qualitative data, Categorical data,질적변수)|이분형자료<br>(dichotomous data)|
-||다분형자료<br>(nondichotomous data)|
-|수량자료<br>(quantitative data,양적변수)|이산형자료<br>(discrete data)|
-||연속형자료<br>(continuous data)|
+|자료|분류|비고|
+|-|-|-|
+|범주자료<br>(qualitative data, Categorical data,질적변수)|이분형자료<br>(dichotomous data)|유무,성별 등|
+||다분형자료<br>(nondichotomous data)|직군, 직업 등|
+|수량자료<br>(quantitative data,양적변수)|이산형자료<br>(discrete data)|셀수 있고 , 무한의 개념을 포함한다. (자연수 : 무한대)|
+||연속형자료<br>(continuous data)|무한이다 ,셀수 없는 무한대 (실수)|
 
-* 이산형자료 : 셀수 있고 , 무한의 개념을 포함한다. (자연수 : 무한대)
-* 연속형 : 무한이다 ,셀수 없는 무한대 (실수)
-* 이분형 : 유무,성별 등
-* 다분형 : 직군, 직업 등
+
 
 
 ###  척도의 종류
