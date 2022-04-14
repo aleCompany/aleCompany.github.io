@@ -43,6 +43,15 @@ $P(A) = \frac3  6$ 이고, $P(B) = \frac2  6 = \frac1  3, P(A \cap B) = \frac1 6
 $P( B|A ) = \frac {P(A \cap B)}{P(A)} , P(B|A^c) = \frac {P(A^c \cap B)}{P(A^c)} = \frac {P(B)-P(A \cap B)}{1- P(A)}$ 두식이   같으려면 , $P(A) \times P(B) = P(A \cap B)$ 이다<br><br>
 정리하자면, <br>독립사건일때, $P(A \cap B)= P(A) \times P(B)$ 단, $P(A)>0,P(B)>0$ <br> 종속사건일때, $P(A \cap B) = P(A)P(B|A) = P(B)P(A|B)$
 
+### 사건 $A,B$가 독립이면, $A^{c}$ 과 $B$도 독립일까?
+
+$P(A^{c} \cap B) = P(B)-P(A \cap B)$<br>
+여기서 A,B가 독립이므로<br>
+$P(A^{c} \cap B) = P(B)-P(A)P(B)$ 변경이 가능하고 $P(B)$를 공통으로 묶어내면,<br>
+$P(A^{c} \cap B) = P(B)(1-P(A)) = P(B)P(A^{c})$ 가 성립됨을 알 수있다.
+
+따라서 $A^{c}$ 과 $B$도 독립이 된다.
+
 ### **시행의 독립과 사건의 독립**
 
 이 둘의 개념은 차이가 있다.
