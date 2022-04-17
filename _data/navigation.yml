@@ -51,6 +51,9 @@ docs:
         category: "txtMining"        
   - title: "인공지능"
     children:
+      - title: "인공지능"
+        url: /artificialintelligence/
+        category: "artificialintelligence"
       - title: "기계학습"
         url: /mushineLearn/
         category: "mushineLearn"
@@ -60,6 +63,9 @@ docs:
       - title: "인공신경망"
         url: /NeuralNetwork/
         category: "NeuralNetwork"
+      - title: "딥러닝"
+        url: /deeplearning/
+        category: "deeplearning"
   - title: "기초 및 환경설정"
     children:
       - title: "통계R 기초"
