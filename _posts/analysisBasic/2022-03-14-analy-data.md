@@ -67,8 +67,15 @@ author_profile: false
 * 십분위수  범위(interdecile range)
   - IDR = 제9십분위수(D<sub>3</sub>) - 제1십분위수(D<sub>1</sub>)
 
-* 절대평균편차(mean absolute deviation:MAD)
+* 편차(deviation)
+  
   - 편차 : 관측값이 자료의 평균으로 부터 떨어진  차이
+  - 편차는 양수, 음수 모두 가능하며, 평균보다 크면 양수, 작으면 음수가 된다.
+  - 편차의 크기는 관측값이 평균으로 부터 떨어진 거리를 말함
+  - 편차의 합은 항상 0이므로 변량이 흩어져 있는 정도를 알수는 없다. 
+  - 모집단 평균에서의 편차는 오류(Error), 표본집단 평균에서의 편차는 잔차(Observed Value)라고 한다
+
+* 절대평균편차(mean absolute deviation:MAD)
   - MAD : 편차의 절대값에 대한 평균
   
     $$MAD = \frac{1}{n}  \sum_{i-1}^{n}\left| X_{i} - \bar{X}_{n} \right|$$
@@ -78,6 +85,7 @@ author_profile: false
   * 편차의 제곱에 대한 평균
   * 모분산 $\sigma ^2 = \frac{1}{N}  \sum_{i-1}^{n}( X_{i} -\mu  )^2$
   * 표본분산 $S ^2 = \frac{1}{n-1}  \sum_{i-1}^{n}( X_{i} -\bar{X}_{n}  )^2$
+    - n-1 로 나누에 유의 : 표본분산의 기대값이 n-1로 나눠줘야 모분산이 나옴
 
 
 * 표준편차(standard deviation:sd)
