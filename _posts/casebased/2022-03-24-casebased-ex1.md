@@ -24,6 +24,7 @@ author_profile: false
   |47|mis|12|45|
 
 * 신규채용자 : 신규로 들어 오는 직원의 정보인데, 소득을 정하고자 하는 예제 이다.
+  
   |age|job_area|education|income|
   |-|-|-|-|
   |39|mis|14|55|
