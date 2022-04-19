@@ -38,7 +38,7 @@ author_profile: false
     df[df$sel_sim=='bestSimularity',]
 
     ```
-    ※ 위에서 사용된 사용자함수 링크 [link text](2022-03-24-casebased-ex1.md)
+    ※ 위에서 사용된 사용자함수 링크 [link text](../2022-03-24-casebased-ex1.md)
 
 * 결과 - 기존과 가장 유사사례
 
