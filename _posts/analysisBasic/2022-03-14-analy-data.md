@@ -86,11 +86,15 @@ author_profile: false
   * 모분산 $\sigma ^2 = \frac{1}{N}  \sum_{i-1}^{n}( X_{i} -\mu  )^2$
   * 표본분산 $S ^2 = \frac{1}{n-1}  \sum_{i-1}^{n}( X_{i} -\bar{X}_{n}  )^2$
     - n-1 로 나누에 유의 : 표본분산의 기대값이 n-1로 나눠줘야 모분산이 나옴
-
+  * 분산의 특징
+    * X를 확률변수라 하고, a,b를 상수라고 할때 , 항상 다음 조건을 만족
+    * $Var(aX) = a^2Var(X)$
+    * $Var(aX+b) = a^2Var(X)$
 
 * 표준편차(standard deviation:sd)
   * 모표준편차 $\sigma = \sqrt {\sigma ^2}$
   * 표본표준편차 $S = \sqrt {S ^2}$
+  * 분산의 **양의 제곱근을 표준편차**라고 함
   
 * 변동계수(coefficient of variation:CV)
   * 평균값을  감안한 상대적 산포도 척도
