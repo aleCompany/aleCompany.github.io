@@ -9,232 +9,40 @@ author_profile: false
 
 ### 정규분포(normal distribution)
 
-* 확률변수 X : 구간 (a,b)에서 균등한 가능성으로 발생한 값.
-* 분포의 특징
-  * 확률함수 
-   $$f(x) = \left\{\begin{matrix}\frac{1} {b-a}, a < x < b \\ 0, 나머지 \\ \end{matrix}\right.$$
-  * 기대값 $E(X) = \frac{a+b}{2}$
-  * 분산 $Var(X) = \frac{ (b-a)^2 }{12}$
-  
-* 분포관련 R 함수
+* 연속형 확률분포에서 가장 대표적인 확률분포 : $X \sim N(\mu,\sigma^2)$
+* 확률밀도 함수
 
-  <table>
-    <thead>
-      <tr><th>내용</th><th>형식</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>밀도함수</td><td>dunif(x, min, max)</td></tr>    
-      <tr><td>누적분포함수</td><td>punif(q, min, max, lower.tail=TRUE/FALSE)</td></tr>    
-      <tr><td>분위수함수</td><td>qunif(p, min, max, lower.tail=TRUE/FALSE)</td></tr>    
-      <tr><td>난수발생</td><td>runif(n, min, max)</td></tr>                      
-    </tbody>
-  </table>
-  
-* 분포관련 R 표현
-  
-  ``` {R}
-    # PDF
-    > min = 0; max=10; x=seq(min,max,length.out=100)  #연속형이기 때문에 갯수를 많이 쪼깸
+  $$f(x)= \frac {1} {\sqrt{2 \pi \sigma^2 }} e^{ - \frac{(x-mu)^2}{2\sigma^2}}$$
 
-    > # pdf
-    > y = dunif(x,min,max)    
-    > plot(x, y,xlab="x", ylab="f(x)", type='l', lwd = 3, main="pdf", xlim=c(min-2,max+2) ,ylim=c(0,1/(max-min)) )
-    > lines(c(min-2,min),c(0,0),lwd=3)
-    > lines(c(max,max+2),c(0,0),lwd=3)
- 
-    > # cdf = pdf 의 합 (PDF->CDF 일반화)
-    > cy = punif(x,min,max)
-    > plot(x, cy,xlab="x", ylab="f(x)", type='l', lwd = 3, main="cdf", xlim=c(min-2,max+2) ,ylim=c(0,1) )
-    > lines(c(min-2,min),c(0,0),lwd=3)
-    > lines(c(max,max+2),c(1,1),lwd=3)    
-  ```
+* 평균, 분산
+  $$E(X)= \mu, Var(X)= \sigma^2 $$
 
-  <center><img src="../../images/2022-03-17-contdist/pic-1.png" /></center>  
+* 특징
+  * 평균을 중심으로 좌우 대칭, 평균 = 중앙값 = 최빈값
+  * 평균에서 멀어질수록 확률밀도함수 값은 점차 작아진다
+  * 분산이 클수록 확률밀도함수의 꼬리가 두꺼워진다.
+  * 정규분포의 pdf 직접 적분하여 확률을 구하는 것은 쉽지 않다
 
+* 모양
+    <center><img src="../../images/2022-03-18-normalDist/pic-1.png" /></center>  
 
-### 지수 분포(Exponential probability distribution)
+### 표준정규분포(standiard normal distribution)
 
-* 확률변수 X : 포아송 과정(ex: 수명, 대기시간 등)에서 **하나**의 사건이 발생할 때까지의 대기시간
-* 분포의 특징
-  * 확률밀도함수(pdf)
-   $$f(x) = \left\{\begin{matrix}\ \lambda e^{-\lambda x}, x  \ge 0 \\ 0, x < 0  \\ \end{matrix}\right.$$
+* 표준정규분포: 평균이 0이고 분산이 1인 정규분포, $X \sim N(0,1)$
+  * 표준정규분포를 따르는 확률변수를 일반적으로 Z 로 표현
 
-   $$\lambda : 단위시간동안 평균 이벤트 발생횟수$$
-  
-  * 누적분포함수(cdf)
-   $$F(x) = P(X\le x) = \left\{\begin{matrix} 1-e^{(-\lambda x)}, x  \ge 0 \\ 0, x < 0   \\ \end{matrix}\right.$$
+* 확률밀도 함수
+  $$f(x)= \frac {1} {\sqrt{2 \pi }} e^{ - \frac{1}{2} x^2 }$$
 
-  * 기대값 $E(X) = \frac {1} { \lambda }$
-  * 분산 $Var(X) = \frac {1} { \lambda^2 }$
+* 정규분포의 표준화
+  * 모든 정규분포는 표준정규분포로 변환할 수 있다.
 
+    $$ Z값 = \frac{X-\mu}{\sigma} , 표본의 경우 = \frac{X-\bar{X}_{n}}{\sigma}$$
 
-* 분포관련 R 함수
+* 표준정규분포의 누적분포함수
+  * 파이라고 읽는다
+    $$ Ø(x) = F(x) = P(Z≤x) = \int_{-∞}^{x} \frac {1} {\sqrt{2 \pi }} e^{ - \frac{1}{2} z^2 }dz $$  
 
-  <table>
-    <thead>
-      <tr><th>내용</th><th>형식</th><th>비고</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>밀도함수</td><td>dexp(x, rate)</td><td>rate=1/λ</td></tr>    
-      <tr><td>누적분포함수</td><td>pexp(q, rate, lower.tail=TRUE/FALSE)</td><td></td></tr>    
-      <tr><td>분위수함수</td><td>qexp(p, rate, lower.tail=TRUE/FALSE)</td><td></td></tr>    
-      <tr><td>난수발생</td><td>rexp(n, rate)</td><td></td></tr>
-    </tbody>
-  </table>
-  
-   
-* 분포관련 R 표현
-  
-  ``` {R}
-    # Ex : 20분당 통화가 1번 걸려오는 경우 , 람다 = 20
-    > lambda = 20; x=seq(0,30,length.out=100)  #연속형이기 때문에 갯수를 많이 쪼깸
+  <center><img src="../../images/2022-03-18-normalDist/pic-2.png" /></center>
 
-    > # pdf
-    > y = dexp(x,1/lambda)    
-    > plot(x, y,xlab="x = Call간격", ylab="f(x)", type='l', lwd = 2, main="pdf" )
-    # 20보다 해당영역 표시, polygon(c(x[20: length(x) ], x[ length(x) :20]),c(rep(-2,length(x[20: length(x) ])), y[ length(x) :20]),col=adjustcolor( rgb(0, 0, 1.0), alpha=0.5 ),lwd=2 )
- 
-    > # cdf = pdf 의 합 (PDF->CDF 일반화)
-    > cy = pexp(x,1/lambda) 
-    > plot(x, cy,xlab="x", ylab="F(x)", type='l', lwd = 3, main="cdf" )
-
-  ```
-
-   <center><img src="../../images/2022-03-17-contdist/pic-2.png" /></center>  
-
-
-
-### 감마 분포(Gamma probability distribution)
-
-* 확률변수  푸아송 과정에서 개의 **n개의** 사건이 발생할 때까지의 대기시간
-* 분포의 특징
-  
-  * 확률밀도함수(pdf)
-
-   $$f(x) = \left\{\begin{matrix}\ \frac{\lambda^\alpha}{\Gamma(\alpha)}  e^{-\lambda x} x^{\alpha - 1} ,  x  \ge 0 \\ 0, x < 0  \\ \end{matrix}\right.$$ 
-   * 편의상 $\beta =  \frac{1}{\lambda}$(첫번째 사건이 발생할 때까지 걸린 시간) 로하면,
-  
-     $$f(x) = \left\{\begin{matrix}\ \frac{1}{\Gamma(\alpha) \beta ^\alpha} e^{-\frac{x}{\beta}} x^{\alpha - 1} ,  x  \ge 0 \\ 0, x < 0  \\ \end{matrix}\right.$$ 
-
-   * 설명하면 $\alpha$번째 사건이 일어날때 까지 걸리는 시간에 대한 연속확률 분포
-   * $X-\Gamma(\alpha,\beta)$ 라 하고, $\alpha$는 형태모수, $\beta$는 척도모수 라 한다
-   * 여기서 $\Gamma(\alpha)$는 감마함수로서 pdf의 면적이 1되도록 하는데 필요
-   * $\alpha =1$인 경우는 지수분포가 됨  $\epsilon(\lambda) = \Gamma(1,1/\lambda)$
-  
-  * 누적분포함수(cdf)
-   $$F(x) = P(X\le x) = \left\{\begin{matrix} 1-\sum_{y=0}^{\alpha-1} \frac{(x/\beta)^ye^{-x/\beta}}{y!} , x  \ge 0 \\ 0, x < 0   \\ \end{matrix}\right.$$
-
-  * 기대값 $E(X) = \frac{\alpha}{\lambda} = \alpha \beta$
-  * 분산 $Var(X) = \frac{\alpha}{\lambda^2} = \alpha \beta^2$
-
-* 분포관련 R 함수
-
-  <table>
-    <thead>
-      <tr><th>내용</th><th>형식</th><th>비고</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>밀도함수</td><td>dgamma(x, shape, rate = 1, scale = 1/rate)</td><td>shape: α 형태모수 , rate:scale의 역수로, 둘중 반드시 하나만 지정해야함 scale: β 척도모수 </td></tr>    
-      <tr><td>누적분포함수</td><td>pgamma(q, shape, rate = 1, scale = 1/rate)</td><td></td></tr>    
-      <tr><td>분위수함수</td><td>qgamma(p, shape, rate = 1, scale = 1/rate)</td><td></td></tr>    
-      <tr><td>난수발생</td><td>rgamma(n, shape, rate = 1, scale = 1/rate)</td><td></td></tr>
-    </tbody>
-  </table>
-  
-  
-* 분포관련 R 표현
-  
-    
-  ``` {R}
-    # Ex 
-    > x <- seq(0, 20, length.out = 101); scale = 0.5;
-
-    > # shape 별로 pdf 그리기
-    > plot(x, dgamma(x, 4, scale = scale), type = 'l', main="pdf" )
-    > lines(x, dgamma(x, 8, scale = scale), col = 'red', lty = 2)
-    > lines(x, dgamma(x, 12, scale = scale), col = 'purple', lty = 2)
-    > lines(x, dgamma(x, 16, scale = scale), col = 'blue', lty = 2)
-    > lines(x, dgamma(x, 20, scale = scale), col = 'grey', lty = 2)
-    > legend('top', bty = 'n', ncol = 3, lty = c(1, 2, 2, 2, 2),
-       col = c('black', 'red', 'purple', 'blue', 'grey'),
-       legend = c('shape = 4', 'shape = 8', 'shape = 12', 'shape = 16', 'shape = 20'))
-  
- 
-    > # cdf
-    > plot(x, pgamma(x, 4, scale = scale), type = 'l', main="cdf")
-    > lines(x, pgamma(x, 8, scale = scale), col = 'red', lty = 2)
-    > lines(x, pgamma(x, 12, scale = scale), col = 'purple', lty = 2)
-    > lines(x, pgamma(x, 16, scale = scale), col = 'blue', lty = 2)
-    > lines(x, pgamma(x, 20, scale = scale), col = 'grey', lty = 2)
-    > legend('top', bty = 'n', ncol = 3, lty = c(1, 2, 2, 2, 2),
-       col = c('black', 'red', 'purple', 'blue', 'grey'),
-       legend = c('shape = 4', 'shape = 8', 'shape = 12', 'shape = 16', 'shape = 20'))
-
-  ```
-
-     <center><img src="../../images/2022-03-17-contdist/pic-3.png" /></center>  
-
-
-
-### 카이제곱 분포(Chi-Squared probability distribution)
-*  $\gamma$개의 서로 독립적인 표준정규 확률변수를 각각 제곱한 다음 합해서 얻어지는 분포이다. 이 때 $\gamma$을 자유도라고 하며, 카이제곱 분포의 매개변수가 된다. 
-*  감마 분포의 특수한 형태로 감마 분포에서 $\alpha=\gamma/2, \beta=2, 단 \gamma \ge 2$ 인경우
-*  $X \sim \chi^2(\gamma)$ X는 자유도 $\gamma$인 카이제곱 분포를 따른다
-
-* 분포의 특징
-    
-  * 확률밀도함수(pdf)
-  
-     $$f(x) = \left\{\begin{matrix}\ \frac{1}{\Gamma(\gamma/2) 2 ^{\gamma/2}} e^{-x/2} x^{\gamma/2 - 1} ,  x  \ge 0 \\ 0, x < 0  \\ \end{matrix}\right.$$ 
-
-  * 기대값 $E(X) = \gamma$
-  * 분산 $Var(X) = 2\gamma$
-
-  * 분포관련 R 함수
-
-    <table>
-      <thead>
-        <tr><th>내용</th><th>형식</th><th>비고</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>밀도함수</td><td>dchisq(df)</td><td>df: 자유도 γ  </td></tr>    
-        <tr><td>누적분포함수</td><td>pchisq(df, lower.tail=TRUE/FALSE)</td><td></td></tr>    
-        <tr><td>분위수함수</td><td>qchisq(df, lower.tail=TRUE/FALSE</td><td></td></tr>    
-        <tr><td>난수발생</td><td>rchisq(n, df)</td><td></td></tr>
-      </tbody>
-    </table>
-    
- 
-* 분포관련 R 표현
-  
-    
-  ``` {R}
-    # Ex 
-    > x <- seq(0, 20, length.out = 101);
-
-    > # shape 별로 pdf 그리기
-    > plot(x, dchisq(x, 1), type = 'l', main="pdf" )
-    > lines(x, dchisq(x, 2), col = 'red', lty = 2)
-    > lines(x, dchisq(x, 4), col = 'purple', lty = 2)
-    > lines(x, dchisq(x, 8), col = 'blue', lty = 2)
-    > lines(x, dchisq(x, 16), col = 'grey', lty = 2)
-    > legend('top', bty = 'n', ncol = 3, lty = c(1, 2, 2, 2, 2),
-       col = c('black', 'red', 'purple', 'blue', 'grey'),
-       legend = c('df = 1', 'df = 2', 'df = 4', 'df = 8', 'df = 16'))
-  
- 
-    > # cdf
-    > plot(x, pchisq(x, 1), type = 'l', main="cdf" )
-    > lines(x, pchisq(x, 2), col = 'red', lty = 2)
-    > lines(x, pchisq(x, 4), col = 'purple', lty = 2)
-    > lines(x, pchisq(x, 8), col = 'blue', lty = 2)
-    > lines(x, pchisq(x, 16), col = 'grey', lty = 2)
-    > legend('top', bty = 'n', ncol = 3, lty = c(1, 2, 2, 2, 2),
-       col = c('black', 'red', 'purple', 'blue', 'grey'),
-       legend = c('df = 1', 'df = 2', 'df = 4', 'df = 8', 'df = 16'))       
-
-  ```    
-
-  
-     <center><img src="../../images/2022-03-17-contdist/pic-4.png" /></center>  
-
+  $$Ø(1.98) = 0.9761, Ø^{-1}(0.9761) = 1.98, z_{0.0239} = 1.98$$
