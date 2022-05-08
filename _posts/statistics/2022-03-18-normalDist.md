@@ -79,3 +79,28 @@ author_profile: false
 * 주어진 시간에 발생한 사건 수가 포아송분포를 따른다면 주어진 시간을 합하여 발생한 총 발생 건수는 정규분포로 근사 가능
 
     $$ X \sim P(n,\lambda) => X \approx  N(n\lambda,n\lambda)$$
+
+
+### 정규분포 관련 R 함수
+
+    <table>
+      <thead>
+        <tr><th>내용</th><th>형식</th><th>비고</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>밀도함수</td><td>dnorm(x, mean = 0, sd = 1, log = FALSE)</td><td>log = TRUE이면 반환되는 값의 log값을 반환</td></tr>    
+        <tr><td>누적분포함수</td><td>pnorm(q, mean=0, sd=1, lower.tail = TRUE, log.p = FALSE)</td><tdlower.tail : TRUE 이면 확률 계산을 P(X<= x)로, FALSE 이면 P(X>x)</td></tr>    
+        <tr><td>분위수함수</td><td>qnorm(p, mean=0, sd=1, lower.tail = TRUE, log.p = FALSE)</td><td>α = P(Z > z<sub>α</sub>), α는 Z가  z<sub>α</sub> 보다 클 확률</td></tr>    
+        <tr><td>난수발생</td><td>rnorm(n, mean = 0, sd = 1)</td><td></td></tr>
+      </tbody>
+    </table>
+
+* Example)
+  
+  > rnorm(5) # 표준정규분포 N(0,1)에서 난수 5개 생성<br>
+  > rnorm(5) # 매 실행 시 다른 결과를 제공<br>
+  > rnorm(10,mean=3,sd=2) # N(3,4)에서 난수 10개 생성<br>
+  > dnorm(0) # 표준정규분포에서 x가 0일때 y값<br>  
+  > pnorm(1.96) # 표준정규분포의 누적분포함수에서 x가 1.96일 때 y값<br>
+  > qnorm(0.975) # 상위 2.5%를 갖는 x 값<br>
+  > qnorm(0.975, lower.tail=FALSE) # 하위 2.5를 갖는 x 값<br>
