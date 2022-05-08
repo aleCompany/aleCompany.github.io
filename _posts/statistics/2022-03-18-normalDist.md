@@ -89,7 +89,7 @@ author_profile: false
       </thead>
       <tbody>
         <tr><td>밀도함수</td><td>dnorm(x, mean = 0, sd = 1, log = FALSE)</td><td>log = TRUE이면 반환되는 값의 log값을 반환</td></tr>    
-        <tr><td>누적분포함수</td><td>pnorm(q, mean=0, sd=1, lower.tail = TRUE, log.p = FALSE)</td><tdlower.tail : TRUE 이면 확률 계산을 P(X<= x)로, FALSE 이면 P(X>x)</td></tr>    
+        <tr><td>누적분포함수</td><td>pnorm(q, mean=0, sd=1, lower.tail = TRUE, log.p = FALSE)</td><td>lower.tail : TRUE 이면 확률 계산을 P(X<= x)로, FALSE 이면 P(X>x)</td></tr>    
         <tr><td>분위수함수</td><td>qnorm(p, mean=0, sd=1, lower.tail = TRUE, log.p = FALSE)</td><td>α = P(Z > z<sub>α</sub>), α는 Z가  z<sub>α</sub> 보다 클 확률</td></tr>    
         <tr><td>난수발생</td><td>rnorm(n, mean = 0, sd = 1)</td><td></td></tr>
       </tbody>
