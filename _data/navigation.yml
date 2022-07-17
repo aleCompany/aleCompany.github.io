@@ -70,7 +70,10 @@ docs:
     children:
       - title: "클라우드 컴퓨팅 개념"
         url: /cloudbasic/
-        category: "cloudbasic"        
+        category: "cloudbasic"
+      - title: "AWS 실습"
+        url: /aws/
+        category: "aws"
   - title: "기초 및 환경설정"
     children:
       - title: "통계R 기초"
