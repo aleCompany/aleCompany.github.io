@@ -57,9 +57,6 @@ docs:
       - title: "기계학습"
         url: /mushineLearn/
         category: "mushineLearn"
-      - title: "데이터전처리"
-        url: /preData/
-        category: "preData"
       - title: "인공신경망"
         url: /NeuralNetwork/
         category: "NeuralNetwork"
