@@ -17,8 +17,7 @@ author_profile: false
 
 ### 텍스트 마이닝 관련 사용기법
 * 정보 검색 기법(information retrieval)
-* 자연어 처리(natural language processing) 기법
-
+* 자연어 처리(natural language processing) 기법<br>
   -> 의사소통언어처리기법, 구어처리기법
 * 특징 추출(feature selection) 기법
 * 텍스트 범주화(text categorization) 기법
@@ -40,7 +39,32 @@ author_profile: false
 
 ※ 전처리 : 전과정의  70~80% 정도 차지, 비정형데이터를 정형화된 표현 양식으로 만듦
 
+### 텍스트 마이닝 처리과정
+1. 데이터의 수집
+   * 데이터 크롤링 등
+2. 데이터 전처리
+   * Cleansing (remove stopword/ punctuation/ whitespace/ …)
+   * Corpus 생성
+   * tm_map() 함수의 적용
 
+3. 자연어 처리
+   * Tockeninzation , Normaization 
+   * Stemming
+   * 한글처리등
+
+4. DTM, TDM 구축
+   
+5. 다양한 분석
+   * 빈도분석 (토픽 분석)
+   * 군집분석 (유사 단어들 또는 문서들간의 분석)
+   * 연관분석 (연관 단어 추출, 단어 네트워크 분석) 
+   * 감성분석 (단어 분석)
+   * 분류 (classification)
+   * 주요 키워드의 추출
+   * 토픽 트렌드 분석, 이상치 분석 (normality)
+
+6. 시각화
+   * 워드 클라우드, 연관성 네트웍 그래프 등
 
 ### 기타 분석 기법
 
