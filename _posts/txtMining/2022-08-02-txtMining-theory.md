@@ -341,7 +341,7 @@ print(result)</pre>
   from nltk.stem import PorterStemmer
   ps = PorterStemmer()
 
-  raw_review = "Okay let's be honest I can't rate this product on accuracy or battery life since I only have had the watch 3 days. So the thickness is 5 star feels good on wrist, 5 star on yes it is an Active 2 watch. <br></br> On it pairing ok it does great on my OnePlus 8  phone and as of right now all works great. In 1 month I will come back to review area and give the 2 important parts review. UPdate: Okay had the watch a little over a month and I must say it all works great the watch battery life is 1and a half days with reminders and gym workouts so over all its a great watch that works"
+  raw_review = "Okay let's be honest I can't rate this product on accuracy or battery life since I only have had the watch 3 days. So the thickness is 5 star feels good on wrist, 5 star on yes it is an Active 2 watch. </br> On it pairing ok it does great on my OnePlus 8  phone and as of right now all works great. In 1 month I will come back to review area and give the 2 important parts review. UPdate: Okay had the watch a little over a month and I must say it all works great the watch battery life is 1and a half days with reminders and gym workouts so over all its a great watch that works"
 
   # 1. HTML 제거
   review_text = BeautifulSoup(raw_review, 'html.parser').get_text()
