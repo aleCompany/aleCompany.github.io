@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "텍스트마이닝 예제 - 1"
+title:  "텍스트마이닝 예제 (R을 활용) - 1"
 categories: txtMining
 tag: [Ai bigData, 텍스트마이닝]
 toc: true
