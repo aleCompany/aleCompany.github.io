@@ -7,7 +7,8 @@ toc: true
 author_profile: false
 ---
 
-### IMDB 영화 리뷰 데이터 ML 기반 감성분석
+### IMDB 영화 리뷰 데이터 ML 기반 감성분석( CountVectorizer 활용 )
+
 1 . IMDB 영화 리뷰 데이터를 활용 ( 다운로드 : https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews )
 <pre>
     import pandas as pd
@@ -112,3 +113,52 @@ author_profile: false
     score = np.mean(cross_val_score(forest, data_features,review['sentiment'][0:k], cv=10, scoring='roc_auc'))
     print(score)
 </pre>   
+
+### IMDB 영화 리뷰 데이터 ML 기반 감성분석( TfidfVectorizer 활용 )
+
+1 . TF-IDF 벡터 이용
+<pre>
+from sklearn.model_selection import train_test_split
+
+# 1000개 리뷰
+n = 1000
+review = review[0:n]
+
+x_input = review['review']
+y_output = review['sentiment']
+
+x_train, x_test, y_train, y_test = train_test_split(x_input, y_output, stratify=y_output, test_size=0.2, random_state=15)
+
+print(x_train.shape, x_test.shape) # 훈련세트, 테스트세트 비율 확인
+np.unique(y_train, return_counts=True) # 훈련세트의 타깃(라벨) 확인
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+stop_words = stopwords.words('english')
+
+# TF-IDF 가중치를 통해 문서-단어 매트릭스로 바꾸기
+vect = TfidfVectorizer(stop_words=stop_words).fit(x_train)
+x_train_vectorized = vect.transform(x_train)
+</pre>
+
+2 . 로지스틱 회귀 수행
+<pre>
+from sklearn.linear_model import LogisticRegression, SGDClassifier
+
+model = LogisticRegression()
+model.fit(x_train_vectorized, y_train)
+print(model.score(x_train_vectorized, y_train))
+
+print(model.score(vect.transform(x_test), y_test))
+</pre>
+
+3 . Decision Tree 수행
+<pre>
+from sklearn.tree import DecisionTreeClassifier
+
+clf = DecisionTreeClassifier()
+clf.fit(x_train_vectorized, y_train)
+
+print(clf.score(x_train_vectorized, y_train))
+print(clf.score(vect.transform(x_test), y_test))
+</pre>
