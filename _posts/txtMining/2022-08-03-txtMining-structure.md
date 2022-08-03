@@ -54,6 +54,19 @@ author_profile: false
 * 원-핫벡터와 달리 출현 횟수만 있기 때문 문서 재생은 어려움
 * 예를 들어 환율 주가 단어가 많이 출현하면 경제학 관련, 등 으로 분류 하는 방법
 * 기본적으로 이진 단어 모음 벡터가 있음
+* 이진 단어 모음벡터 만들기
+<pre>
+  corpus = "Apple Inc. is an American multinational technology company that specializes in consumer electronics, software and online services headquartered in Cupertino, California, United States. Apple is the largest technology company by revenue (totaling US$365.8 billion in 2021) and as of June 2022, it is the world's biggest company by market capitalization, the fourth-largest personal computer vendor by unit sales and second-largest mobile phone manufacturer. It is one of the Big Five American information technology companies, alongside Alphabet, Amazon, Meta, and Microsoft"
+  corpus_bow = {}
+  for token in corpus.split():
+      corpus_bow[token] = 1
+  sorted(corpus_bow.items())
+
+  # 각 단어에 숫자 1 할당하고 데이터프레임 형태로 만들기 (T는 transpose)
+  import pandas as pd
+  df = pd.DataFrame(pd.Series(dict([(token, 1) for token in corpus.split()])), columns=['corpus1']).T
+  df
+</pre>
 * bag of words 만들기
 <pre>
   # (1) 문장 안의 단어 추출
@@ -103,7 +116,7 @@ author_profile: false
 * 문서에 단의 빈도를 Matrix로 표현하여 독립변수로 활용하게 됨.
 <br>
   <img src="../../images/2022-08-03-txtMining-structure/pic-1.png">
-  
+
   * 사이킷런 CountVectorizer을 이용한 DTM
 <pre>
   from sklearn.feature_extraction.text import CountVectorizer
