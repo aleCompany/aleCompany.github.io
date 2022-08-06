@@ -131,4 +131,4 @@ author_profile: false
        * Step4) 더 이상의 클러스터가 없을때 까지 반복 실행
 
 2. 계층적 클러스터링 (Hierarchical 방법) : 
-    - Dendogram 형태로 그려짐 : <a href="../../Clustering/Clustering-theory/#군집분석-유형--major-clustering-approaches-">상세보기</a>
+    - Dendogram 형태로 그려짐 : <a href="../../clustering/Clustering-theory/#군집분석-유형--major-clustering-approaches-">상세보기</a>
