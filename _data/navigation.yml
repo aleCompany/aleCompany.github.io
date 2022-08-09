@@ -85,6 +85,13 @@ docs:
       - title: "파이썬 설치"
         url: /setupPy/
         category: "setupPy"
+  - title: "오류 해결 및 세팅"        
+    children:
+      - title: "electron 및 Vue"
+        url: /electron/
+        category: "electron"        
+
+
   - title: "요리"
     children:
       - title: "파운드케익"
