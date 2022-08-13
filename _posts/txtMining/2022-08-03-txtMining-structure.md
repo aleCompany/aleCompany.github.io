@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "텍스트 문서의 변환"
+title:  "텍스트 마이닝을 위한 문서의 벡터 변환"
 categories: txtMining
 tag: [DTM,TDM,문서구조]
 toc: true
@@ -139,7 +139,7 @@ author_profile: false
 </pre>
 
 #### TF-IDF 변환
-* 문서에 자주 나타나지만 의미에 도움이 않는 경우 낮은 가중치를 부여
+* <b>문서에 자주 나타나지만 의미에 도움이 않는 경우 낮은 가중치를 부여 하기 위함</b>
 * DF가 낮을 수록 중요도는 증가
 * IDF 가 클수록 중요도 증가
 * TF-IDF : (TF-IDF)(t, d)=TF(t, d) x IDF(t)  - 빈도 와 IDF 가중치의 곱
