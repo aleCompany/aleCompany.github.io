@@ -89,9 +89,10 @@ docs:
     children:
       - title: "electron 및 Vue"
         url: /electron/
-        category: "electron"        
-
-
+        category: "electron"
+      - title: "aws 관련"
+        url: /aws_error/
+        category: "aws_error"
   - title: "요리"
     children:
       - title: "파운드케익"
