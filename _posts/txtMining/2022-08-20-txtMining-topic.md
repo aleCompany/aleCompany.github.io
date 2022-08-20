@@ -75,40 +75,40 @@ author_profile: false
     - 최종적으로 각 문서의 토픽 구성과 각 단어가 토픽에서 차지하는 구성을 알 수 있음
 
 * LDA 실습 예제
-<pre>
-###### 5개 topic 으로 하여 LDA 모델을 학습 예제 (texts : 전처리 된 document)
+    <pre>
+    ###### 5개 topic 으로 하여 LDA 모델을 학습 예제 (texts : 전처리 된 document)
 
-### 1. 정수 인코딩과 단어 집합 만들기 
-# create a Gensim dictionary from the texts
-from gensim import corpora
-dictionary = corpora.Dictionary(texts)
-list(dictionary)
+    ### 1. 정수 인코딩과 단어 집합 만들기 
+    # create a Gensim dictionary from the texts
+    from gensim import corpora
+    dictionary = corpora.Dictionary(texts)
+    list(dictionary)
 
-# remove extreme words (similar to the min/max df step used when creating the tf-idf matrix)
-dictionary.filter_extremes(no_below=1, no_above=0.8)
+    # remove extreme words (similar to the min/max df step used when creating the tf-idf matrix)
+    dictionary.filter_extremes(no_below=1, no_above=0.8)
 
-# convert the dictionary to a bag of words corpus for reference
-corpus = [dictionary.doc2bow(text) for text in texts]
-len(corpus)
+    # convert the dictionary to a bag of words corpus for reference
+    corpus = [dictionary.doc2bow(text) for text in texts]
+    len(corpus)
 
 
-# 2. LDA 
-import gensim
-NUM_TOPICS = 5
-ldamodel = gensim.models.ldamodel.LdaModel(corpus, num_topics = NUM_TOPICS, id2word=dictionary, passes=15)
-topics = ldamodel.print_topics(num_words=4)
-for topic in topics:
-    print(topic)
+    # 2. LDA 
+    import gensim
+    NUM_TOPICS = 5
+    ldamodel = gensim.models.ldamodel.LdaModel(corpus, num_topics = NUM_TOPICS, id2word=dictionary, passes=15)
+    topics = ldamodel.print_topics(num_words=4)
+    for topic in topics:
+        print(topic)
 
-</pre>
+    </pre>
 
 * LDA 시각화
 LDA 시각화를 위해서는 pyLDAvis의 설치가 필요
 
-<pre>
-import pyLDAvis.gensim_models
+    <pre>
+    import pyLDAvis.gensim_models
 
-pyLDAvis.enable_notebook()
-vis = pyLDAvis.gensim_models.prepare(ldamodel, corpus, dictionary)
-pyLDAvis.display(vis)
-</pre>
+    pyLDAvis.enable_notebook()
+    vis = pyLDAvis.gensim_models.prepare(ldamodel, corpus, dictionary)
+    pyLDAvis.display(vis)
+    </pre>
