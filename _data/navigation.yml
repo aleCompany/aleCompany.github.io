@@ -93,6 +93,9 @@ docs:
       - title: "aws 관련"
         url: /aws_error/
         category: "aws_error"
+      - title: "기타오류"
+        url: /etc_error/
+        category: "etc_error"        
   - title: "요리"
     children:
       - title: "파운드케익"
